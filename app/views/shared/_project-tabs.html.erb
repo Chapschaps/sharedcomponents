@@ -1,0 +1,30 @@
+<div class="nav-tabs-tibo d-flex justify-content-center align-items-center nav pt-1" id="nav-tab" role="tablist">
+  <div class='nav-line'></div>
+  <div class='nav-link nav-tabs-tibo__title active' id="all-tab" data-filter='all'>TRAVAUX</div>
+  <div class="seperator"><span>&#183;</span></div>
+  <div class='nav-link nav-tabs-tibo__title' id="marketing-tab" data-filter='Événementiel'>ÉVÉNEMENTIEL</div>
+  <div class="seperator"><span>&#183;</span></div>
+  <div class='nav-link nav-tabs-tibo__title' id="identity-tab" data-filter='Univers graphique'>UNIVERS GRAPHIQUE</div>
+  <div class="seperator"><span>&#183;</span></div>
+  <div class='nav-link nav-tabs-tibo__title' id="illustration-tab" data-filter='Motion Design'>MOTION DESIGN</div>
+  <div class="seperator"><span>&#183;</span></div>
+  <div class='nav-link nav-tabs-tibo__title' id="edition-tab" data-filter='Édition'>ÉDITION</div>
+  <div class="seperator"><span>&#183;</span></div>
+  <div class='nav-link nav-tabs-tibo__title' id="webdesign-tab" data-filter='Numérique'>NUMÉRIQUE</div>
+  <div class='nav-line'></div>
+</div>
+
+<!-- PROJECTS-TABS -->
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane show active">
+    <div class="index-container" id='projects'>
+      <% @projects.each do |project| %>
+        <% @project = project %>
+        <%= render partial: 'shared/project-card-index', object: @project %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="d-flex bottom-nav-line">
+  <div class='nav-line'></div>
+</div>

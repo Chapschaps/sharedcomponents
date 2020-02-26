@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+project1 = Project.new(
+  category: "Marketing",
+  description: "Invitation pour un petit déjeuner professionel via mailing & Emailing",
+  client: "2FPCO",
+  priority: 1,
+  date: Date.new(2013, 8, 20)
+)
+
+filepaths = [
+  'app/assets/images/Brabra/mailing/mailing_1.jpg',
+  'app/assets/images/Brabra/mailing/mailing_2.jpg'
+]
+
+filepaths.each do |filepath|
+  project1.photos.attach(
+    io: File.open(filepath),
+    filename: filepath.split('/').last
+  )
+end
+
+p "creating #{project1.category}#{project1.client}"
+project1.save!

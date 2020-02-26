@@ -1,0 +1,38 @@
+.nav-tabs-tibo__title {
+  font-weight: bold;
+  transition: all .3s;
+  color: $blue-opaque;
+
+  &:hover,
+  &.active {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.nav-line {
+  height: 2px;
+  margin: 1rem;
+  flex-grow: 1;
+  background: $blue;
+  border-radius: 2px;
+
+  &.message-line {
+    margin: 0 0 0 1rem;
+  }
+
+  &.message-line-left {
+    margin: 0 1rem 0 0;
+  }
+}
+
+.nav-tabs-tibo,
+.bottom-nav-line {
+  .seperator {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  max-width: 90vw;
+  margin: 0 auto;
+}
